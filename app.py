@@ -103,4 +103,4 @@ def via_api():
 
 if __name__ == "__main__":
     app.secret_key='thisisasecretkey'
-    app.run(debug=True)
+    app.run(debug=False)
