@@ -2,6 +2,7 @@ import os
 import numpy as np
 from flask import Flask, render_template, request, jsonify,redirect,url_for,flash
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'bdhcbdjhbsjhvsjvjvsjdhfv121319414!!%#$#$%@gueqfdtdf15646'
 
 import pickle
 div3_rf = pickle.load(open('div3_rf.pkl','rb'))
@@ -102,5 +103,4 @@ def via_api():
 
 
 if __name__ == "__main__":
-    app.secret_key='bdhcbdjhbsjhvsjvjvsjdhfv121319414!!%#$#$%@gueqfdtdf15646'
     app.run(debug=False)
