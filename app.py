@@ -54,7 +54,7 @@ def home():
             return render_template('result.html',content=result)
         except:
             flash('Enter Information correctly')
-            return render_template('home.html')
+            return redirect(url_for('home'))
     return render_template('home.html')
 
 @app.route('/acknowledgment',methods=['GET'])
