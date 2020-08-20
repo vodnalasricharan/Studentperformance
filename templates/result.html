@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Predict Student Performance</title>
+    <link rel="stylesheet" href="./static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="./static/assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#" style="width: 300px;text-align: center;">Predict Student Performance</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{ url_for('akno') }}"><strong>acknowledgement</strong></a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <main class="page contact-us-page">
+        <section class="clean-block clean-form dark" style="background: url('./static/assets/img/pillal4.jpg') left / cover no-repeat;">
+            <div class="container" style="">
+                <div class="block-heading"></div>
+                <h3 >Pass/Fail</h3>
+               <table class="table table-borderless table-dark">
+      <thead>
+        <tr>
+          <th scope="col">NV</th>
+          <th scope="col">NN</th>
+          <th scope="col">SVM</th>
+          <th scope="col">DT</th>
+            <th scope="col">RF</th>
+        </tr>
+      </thead>
+      <tbody><tr>
+      {% for i in content['div1'] %}
+        {% if i==1 %}
+            <td>Pass</td>
+          {% else %}
+            <td>Fail</td>
+          {% endif %}
+      {% endfor %}
+        </tr></tbody>
+</table>
+                <h3>Which Grade?</h3>
+               <table class="table table-borderless table-dark">
+      <thead>
+        <tr>
+          <th scope="col">NV</th>
+          <th scope="col">NN</th>
+          <th scope="col">SVM</th>
+          <th scope="col">DT</th>
+            <th scope="col">RF</th>
+        </tr>
+      </thead>
+      <tbody><tr>
+      {% for i in content['div2'] %}
+        {% if i==0 %}
+            <td>A</td>
+          {% elif i==1 %}
+            <td>B</td>
+          {% elif i==2 %}
+            <td>C</td>
+          {% elif i==3 %}
+            <td>D</td>
+          {% else %}
+            <td>F</td>
+          {% endif %}
+      {% endfor %}
+        </tr></tbody>
+</table>
+                 <h3>Marks</h3>
+               <table class="table table-borderless table-dark">
+      <thead>
+        <tr>
+          <th scope="col">NV</th>
+          <th scope="col">NN</th>
+          <th scope="col">SVM</th>
+          <th scope="col">DT</th>
+            <th scope="col">RF</th>
+        </tr>
+      </thead>
+      <tbody><tr>
+      {% for i in content['div3'] %}
+        <td>{{ i }}</td>
+      {% endfor %}
+        </tr></tbody>
+</table>
+            </div>
+            <div class="container"     style="max-width: 400px; margin-top:50px;">
+            <h3 align="center">Grades Table</h3>
+                <table class="table table-borderless table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Range</th>
+          <th scope="col">Grade</th>
+
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td>16-20</td>
+          <td>A</td>
+      </tr>
+      <tr>
+          <td>14-16</td>
+          <td>B</td>
+      </tr>
+      <tr>
+          <td>12-14</td>
+          <td>C</td>
+      </tr>
+      <tr>
+          <td>10-12</td>
+          <td>D</td>
+      </tr>
+      <tr>
+
+          <td>0-10</td>
+          <td>F</td>
+      </tr>
+      </tbody></table>
+            </div>
+        </section>
+    </main>
+    <!-- Start: Footer Dark -->
+    <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <p>© 2020 Copyright Developed by : <a href="https://vodnalasricharan.github.io/">Sricharan</a> and <a href="https://varunofficial2509.github.io/">Varun Teja</a></p>
+        </div>
+    </footer>
+    <!-- End: Footer Dark -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="./static/assets/js/script.min.js"></script>
+</body>
+
+</html>
